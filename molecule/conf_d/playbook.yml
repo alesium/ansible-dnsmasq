@@ -1,0 +1,9 @@
+---
+- name: Converge
+  hosts: all
+  become: true
+  vars:
+    dnsmasq_conf_templates:
+      - lala.conf
+  roles:
+    - role: ansible-dnsmasq
