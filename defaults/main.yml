@@ -3,3 +3,5 @@
 # dnsmasq_conf_src: # define to overwrite the default
 # dnsmasq_conf_templates:
 #   - list of files to send into /etc/dnsmasq.conf.d
+dnsmasq_conf_owner: root
+dnsmasq_conf_group: root

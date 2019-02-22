@@ -12,8 +12,8 @@
   template:
     src: "{{ dnsmasq_conf_src }}"
     dest: /etc/dnsmasq.conf
-    owner: root
-    group: root
+    owner: "{{ dnsmasq_conf_owner }}"
+    group: "{{ dnsmasq_conf_group }}"
     mode: 0644
     backup: true
   when: dnsmasq_conf_src is defined
@@ -26,8 +26,8 @@
     src: "{{ item }}"
     dest: /etc/dnsmasq.d
     mode: 0644
-    owner: root
-    group: root
+    owner: "{{ dnsmasq_conf_owner }}"
+    group: "{{ dnsmasq_conf_group }}"
     backup: true
   with_items: "{{ dnsmasq_conf_templates }}"
   when: dnsmasq_conf_templates is defined
